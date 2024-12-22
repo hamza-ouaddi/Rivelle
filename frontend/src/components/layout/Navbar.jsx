@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="font-clashDisplay text-2xl font-normal relative w-full flex justify-between items-center p-4 md:px-10 md:py-5 lg:px-16 lg:py-5">
+      <nav className="font-clashDisplay text-2xl font-normal relative w-full h-[10vh] flex justify-between items-center p-4 md:px-10 md:py-5 lg:px-16 lg:py-5">
         <Link to="/">
           <img src={RivelleLogo} alt="Rivelle Logo" className="min-w-28" />
         </Link>

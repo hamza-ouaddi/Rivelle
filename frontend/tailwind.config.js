@@ -17,8 +17,8 @@ export default {
         "dark-gray-2": "#212529",
       },
       fontFamily: {
-        clashDisplay: ["Clash Display", "sans-serif"],
-        clashGrotesk: ["Clash Grotesk", "sans-serif"],
+        clashDisplay: ["Clash Display Variable Font", "sans-serif"],
+        clashGrotesk: ["Clash Grotesk Variable Font", "sans-serif"],
       },
     },
   },

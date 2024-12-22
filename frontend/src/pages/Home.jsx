@@ -1,5 +1,10 @@
 import React from "react";
+import HeroSection from "../components/home_page/HeroSection";
 
 export default function Home() {
-  return <h1 className="font-clashDisplay text-8xl font-semibold">Home</h1>;
+  return (
+    <main>
+      <HeroSection />
+    </main>
+  );
 }
