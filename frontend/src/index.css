@@ -15,12 +15,6 @@
     --color-medium-gray-2: #495057;
     --color-dark-gray-1: #343a40;
     --color-dark-gray-2: #212529;
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
   }
 
   * {
@@ -28,6 +22,10 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
