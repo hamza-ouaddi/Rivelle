@@ -20,6 +20,9 @@ export default {
         clashDisplay: ["Clash Display Variable Font", "sans-serif"],
         clashGrotesk: ["Clash Grotesk Variable Font", "sans-serif"],
       },
+      backgroundSize: {
+        "150%": "150%",
+      },
     },
   },
   plugins: [],
