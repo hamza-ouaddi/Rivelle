@@ -1,3 +1,7 @@
+import womenImage from "../../assets/images/woman-image.jpg";
+import menImage from "../../assets/images/man-image.jpg";
+import kidsImage from "../../assets/images/kids-image.jpg";
+
 export const navbarRoutes = [
   {
     label: "Home",
@@ -14,6 +18,24 @@ export const navbarRoutes = [
   {
     label: "Contact",
     url: "/contact",
+  },
+];
+
+export const mainCategoriesWithImages = [
+  {
+    label: "Women",
+    url: "/women",
+    image: womenImage,
+  },
+  {
+    label: "Men",
+    url: "/men",
+    image: menImage,
+  },
+  {
+    label: "Kids",
+    url: "/kids",
+    image: kidsImage,
   },
 ];
 
