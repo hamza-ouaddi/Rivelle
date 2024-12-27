@@ -39,7 +39,7 @@ export const mainCategoriesWithImages = [
   },
 ];
 
-export const categories = [
+export const categoriesRoutes = [
   {
     label: "Featured Products",
     url: "/featured-products",
@@ -62,7 +62,7 @@ export const categories = [
   },
 ];
 
-export const products = [
+export const productsRoutes = [
   {
     label: "Jacket",
     url: "/products/jacket",
