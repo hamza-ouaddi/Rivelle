@@ -3,10 +3,9 @@ import { Link } from "react-router";
 import RivelleLogo from "../../assets/images/rivelle-logo-white.svg";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import {
-  categories,
+  categoriesRoutes,
   customerServices,
-  navbarRoutes,
-  products,
+  productsRoutes,
   socialMediaLinks,
 } from "../../lib/constants/route";
 
@@ -47,7 +46,7 @@ function Footer() {
           <li className="font-medium text-white text-2xl mb-6 leading-[100%]">
             Categories
           </li>
-          {categories.map((category) => (
+          {categoriesRoutes.map((category) => (
             <li className="mb-3">
               <Link key={category.label} to={category.url}>
                 {category.label}
@@ -60,7 +59,7 @@ function Footer() {
           <li className="font-medium text-white text-2xl mb-6 leading-[100%]">
             Products
           </li>
-          {products.map((product) => (
+          {productsRoutes.map((product) => (
             <li className="mb-3">
               <Link key={product.label} to={product.url}>
                 {product.label}
