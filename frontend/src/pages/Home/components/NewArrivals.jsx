@@ -1,6 +1,5 @@
-// components/ProductCarousel.jsx
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css";
 import { products } from "../../../lib/constants/data";

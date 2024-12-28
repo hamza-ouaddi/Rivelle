@@ -5,6 +5,7 @@ import CategoriesSection from "./components/CategoriesSection";
 import BannerSection from "./components/BannerSection";
 import SpotlightSection from "./components/SpotlightSection";
 import NewArrivals from "./components/NewArrivals";
+import FeaturedProducts from "./components/FeaturedProducts";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <NewArrivals />
       <SpotlightSection />
+      <FeaturedProducts />
       <BannerSection />
       <CategoriesSection />
       <FeaturesSection />
