@@ -5,7 +5,7 @@ import LinkCTA from "../../../components/common/buttons/LinkCTA";
 function HeroSection() {
   return (
     <section
-      className="font-clashDisplay text-white relative flex flex-col justify-end h-[88.5vh] bg-cover bg-center px-3 py-11 sm:px-6 sm:py-11  md:p-12 mx-3 rounded-3xl overflow-hidden"
+      className="font-clashDisplay text-white relative flex flex-col justify-end h-[88.5vh] bg-cover bg-center px-3 py-11 sm:px-6 sm:py-11 md:p-12 mx-3 rounded-3xl overflow-hidden"
       style={{ backgroundImage: `url(${heroBackground})` }}
     >
       <div className="absolute inset-0 bg-gradient-to-t to-40% from-black/60 to-transparent z-0" />

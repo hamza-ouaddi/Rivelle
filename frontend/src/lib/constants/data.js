@@ -16,41 +16,45 @@ import sportBomberJacket from "../../assets/images/products/sport-bomber-jacket.
 import fitnessBodysuit from "../../assets/images/products/fitness-bodysuit.jpg";
 import executiveSuitSet from "../../assets/images/products/executive-suit-set.jpg";
 
+import womenImage from "../../assets/images/woman-image.jpg";
+import menImage from "../../assets/images/man-image.jpg";
+import kidsImage from "../../assets/images/kids-image.jpg";
+
 export const products = [
   {
     id: 1,
     title: "Silk Evening Dress",
     price: 129,
     image: silkEveningDress,
-    category: "new-arrivals",
+    category: "women",
   },
   {
     id: 2,
     title: "Classic Overcoat",
     price: 189,
     image: classicOvercoat,
-    category: "new-arrivals",
+    category: "men",
   },
   {
     id: 3,
     title: "Charcoal Formal Blazer",
     price: 159,
     image: charcoalFormalBlazer,
-    category: "new-arrivals",
+    category: "men",
   },
   {
     id: 4,
     title: "Winter Puffer Jacket",
     price: 46,
     image: winterPufferJacket,
-    category: "new-arrivals",
+    category: "women",
   },
   {
     id: 5,
     title: "Cozy Hoodie",
     price: 46,
     image: cozyHoddie,
-    category: "new-arrivals",
+    category: "kids",
   },
 
   {
@@ -58,56 +62,56 @@ export const products = [
     title: "Classic Tuxedo Set",
     price: 299,
     image: classicTuxedoSet,
-    category: "featured",
+    category: "men",
   },
   {
     id: 7,
     title: "High-Rise Jeans",
     price: 89,
     image: highRiseJeans,
-    category: "featured",
+    category: "women",
   },
   {
     id: 8,
     title: "Denim Overall Dress",
     price: 79,
     image: denimOverallDress,
-    category: "featured",
+    category: "kids",
   },
   {
     id: 9,
     title: "Turtleneck Sweater",
     price: 95,
     image: turtleneckSweater,
-    category: "featured",
+    category: "men",
   },
   {
     id: 10,
     title: "Kids Loungewear Set",
     price: 49,
     image: kidsLoungewearSet,
-    category: "featured",
+    category: "kids",
   },
   {
     id: 11,
     title: "Sport Bomber Jacket",
     price: 129,
     image: sportBomberJacket,
-    category: "featured",
+    category: "men",
   },
   {
     id: 12,
     title: "Fitness Bodysuit",
     price: 65,
     image: fitnessBodysuit,
-    category: "featured",
+    category: "women",
   },
   {
     id: 13,
     title: "Executive Suit Set",
     price: 259,
     image: executiveSuitSet,
-    category: "featured",
+    category: "women",
   },
 ];
 
@@ -134,3 +138,21 @@ export const features = [
     alt: "Coins on a hand icon - Free Returns",
   },
 ];
+
+export const shopBannerContent = {
+  women: {
+    backgroundImage: womenImage,
+    description:
+      "Discover our curated collection of women's fashion, from elegant dresses to comfortable everyday wear.",
+  },
+  men: {
+    backgroundImage: menImage,
+    description:
+      "Explore our premium selection of menswear, featuring timeless classics and contemporary styles.",
+  },
+  kids: {
+    backgroundImage: kidsImage,
+    description:
+      "Browse our playful and practical children's collection, designed for comfort and adventure.",
+  },
+};
