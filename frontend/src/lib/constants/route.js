@@ -24,17 +24,17 @@ export const navbarRoutes = [
 export const mainCategoriesWithImages = [
   {
     label: "Women",
-    url: "/women",
+    url: "/shop/women",
     image: womenImage,
   },
   {
     label: "Men",
-    url: "/men",
+    url: "/shop/men",
     image: menImage,
   },
   {
     label: "Kids",
-    url: "/kids",
+    url: "/shop/kids",
     image: kidsImage,
   },
 ];
