@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import ShopBanner from "../../components/common/ShopBanner";
-import { products, shopBannerContent } from "../../lib/constants/data";
+import { productsData, shopBannerContent } from "../../lib/constants/data";
 import ProductCard from "../../components/common/ProductCard";
 
 export default function Category() {
@@ -12,7 +12,7 @@ export default function Category() {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    const filtered = products.filter(
+    const filtered = productsData.filter(
       (product) => product.category === category
     );
 

@@ -20,13 +20,14 @@ import womenImage from "../../assets/images/woman-image.jpg";
 import menImage from "../../assets/images/man-image.jpg";
 import kidsImage from "../../assets/images/kids-image.jpg";
 
-export const products = [
+export const productsData = [
   {
     id: 1,
     title: "Silk Evening Dress",
     price: 129,
     image: silkEveningDress,
     category: "women",
+    type: "dress",
   },
   {
     id: 2,
@@ -34,6 +35,7 @@ export const products = [
     price: 189,
     image: classicOvercoat,
     category: "men",
+    type: "coat",
   },
   {
     id: 3,
@@ -41,6 +43,7 @@ export const products = [
     price: 159,
     image: charcoalFormalBlazer,
     category: "men",
+    type: "suit",
   },
   {
     id: 4,
@@ -48,6 +51,7 @@ export const products = [
     price: 46,
     image: winterPufferJacket,
     category: "women",
+    type: "jacket",
   },
   {
     id: 5,
@@ -55,6 +59,7 @@ export const products = [
     price: 46,
     image: cozyHoddie,
     category: "kids",
+    type: "hoodie",
   },
 
   {
@@ -63,6 +68,7 @@ export const products = [
     price: 299,
     image: classicTuxedoSet,
     category: "men",
+    type: "suit",
   },
   {
     id: 7,
@@ -70,6 +76,7 @@ export const products = [
     price: 89,
     image: highRiseJeans,
     category: "women",
+    type: "pants",
   },
   {
     id: 8,
@@ -77,6 +84,7 @@ export const products = [
     price: 79,
     image: denimOverallDress,
     category: "kids",
+    type: "dress",
   },
   {
     id: 9,
@@ -84,6 +92,7 @@ export const products = [
     price: 95,
     image: turtleneckSweater,
     category: "men",
+    type: "sweater",
   },
   {
     id: 10,
@@ -91,6 +100,7 @@ export const products = [
     price: 49,
     image: kidsLoungewearSet,
     category: "kids",
+    type: "shirt",
   },
   {
     id: 11,
@@ -98,6 +108,7 @@ export const products = [
     price: 129,
     image: sportBomberJacket,
     category: "men",
+    type: "jacket",
   },
   {
     id: 12,
@@ -105,6 +116,7 @@ export const products = [
     price: 65,
     image: fitnessBodysuit,
     category: "women",
+    type: "athletic",
   },
   {
     id: 13,
@@ -112,6 +124,7 @@ export const products = [
     price: 259,
     image: executiveSuitSet,
     category: "women",
+    type: "suit",
   },
 ];
 

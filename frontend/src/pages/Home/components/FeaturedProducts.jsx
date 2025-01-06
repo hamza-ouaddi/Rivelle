@@ -1,6 +1,6 @@
 import React from "react";
 import SectionHeading from "../../../components/common/SectionHeading";
-import { products } from "../../../lib/constants/data";
+import { productsData } from "../../../lib/constants/data";
 import ProductCard from "../../../components/common/ProductCard";
 import LinkCTA from "../../../components/common/buttons/LinkCTA";
 
@@ -13,7 +13,7 @@ function FeaturedProducts() {
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {products.slice(0, 8).map((product) => (
+        {productsData.slice(0, 8).map((product) => (
           <ProductCard
             img={product.image}
             title={product.title}
