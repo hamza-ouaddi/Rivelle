@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css";
-import { products } from "../../../lib/constants/data";
+import { productsData } from "../../../lib/constants/data";
 import ProductCard from "../../../components/common/ProductCard";
 import SectionHeading from "../../../components/common/SectionHeading";
 
@@ -39,7 +39,7 @@ function NewArrivals() {
           }}
           className="!pl-4 md:!pl-10 lg:!pl-16 mb-8"
         >
-          {products.slice(0, 8).map((product) => (
+          {productsData.slice(0, 8).map((product) => (
             <SwiperSlide key={product.id}>
               <ProductCard
                 img={product.image}

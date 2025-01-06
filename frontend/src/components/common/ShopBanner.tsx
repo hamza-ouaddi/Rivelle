@@ -3,7 +3,7 @@ import React from "react";
 function ShopBanner({ backgroundImage, title, description }) {
   return (
     <section
-      className="font-clashDisplay text-white relative flex flex-col justify-center h-[44.25vh] bg-cover bg-top px-3 sm:px-12 py-10 sm:py-0 rounded-3xl overflow-hidden mx-3"
+      className="font-clashDisplay text-white relative flex flex-col justify-center h-[56vh] bg-cover bg-center lg:bg-[center_-8rem] xl:bg-[center_-12rem] bg-no-repeat px-3 sm:px-12 py-10 sm:py-0 rounded-3xl overflow-hidden mx-3"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="absolute inset-0 bg-gradient-to-t to-40% from-black/60 to-transparent z-0" />
