@@ -23,17 +23,19 @@ export default function Category() {
     <main className="">
       <ShopBanner
         title={category}
-        backgroundImage={bannerContent.backgroundImage}
-        description={bannerContent.description}
+        backgroundImage={bannerContent?.backgroundImage}
+        description={bannerContent?.description}
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-4 md:mx-10 lg:mx-16 mt-36">
         {filteredProducts.map((product) => (
           <ProductCard
             key={product.id}
+            productId={product.id}
             img={product.image}
             title={product.title}
             price={product.price}
+            category={product.category}
           />
         ))}
       </div>
