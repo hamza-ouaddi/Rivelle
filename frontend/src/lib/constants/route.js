@@ -24,30 +24,22 @@ export const navbarRoutes = [
 export const mainCategoriesWithImages = [
   {
     label: "Women",
-    url: "/shop/women",
+    url: "/shop/category/women",
     image: womenImage,
   },
   {
     label: "Men",
-    url: "/shop/men",
+    url: "/shop/category/men",
     image: menImage,
   },
   {
     label: "Kids",
-    url: "/shop/kids",
+    url: "/shop/category/kids",
     image: kidsImage,
   },
 ];
 
 export const categoriesRoutes = [
-  {
-    label: "Featured Products",
-    url: "/featured-products",
-  },
-  {
-    label: "New Arrivals",
-    url: "/new-arrivals",
-  },
   {
     label: "Women",
     url: "/women",
