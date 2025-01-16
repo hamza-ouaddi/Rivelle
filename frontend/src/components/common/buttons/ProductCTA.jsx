@@ -1,8 +1,9 @@
 import React from "react";
 
-function ProductCTA({ label, type }) {
+function ProductCTA({ label, type, onClick }) {
   return (
     <button
+      onClick={onClick}
       className={`font-clashGrotesk font-medium text-xl w-full py-[10px] rounded-full ${
         type === "dark"
           ? "text-white bg-dark-gray-2"

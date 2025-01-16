@@ -5,9 +5,12 @@ import { navbarRoutes } from "../../lib/constants/route";
 import { FiSearch, FiMenu } from "react-icons/fi";
 import { BsHandbag } from "react-icons/bs";
 import LinkCTA from "../common/buttons/LinkCTA";
+import { useSelector } from "react-redux";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const products = useSelector((state) => state.cart.products);
 
   return (
     <>
@@ -32,7 +35,12 @@ function Navbar() {
 
         <div className="flex items-center gap-5">
           <FiSearch size={24} />
-          <BsHandbag size={24} />
+          <Link to="/cart" className="relative">
+            <BsHandbag size={24} />
+            <span className="absolute -top-2 -right-2 text-xs w-5 h-5 flex items-center justify-center text-white bg-red-500 rounded-full">
+              {products.length}
+            </span>
+          </Link>
           <LinkCTA
             url="/sign-in"
             label="Sign in"
