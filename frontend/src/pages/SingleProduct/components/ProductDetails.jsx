@@ -1,12 +1,18 @@
 import React from "react";
 import { useState } from "react";
-
 import { IoStar } from "react-icons/io5";
 import { IoIosArrowForward } from "react-icons/io";
 import ProductCTA from "../../../components/common/buttons/ProductCTA";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../redux/features/cart/cartSlice";
 
 function ProductDetails({ productData }) {
   const [selectedImage, setSelectedImage] = useState(0);
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  };
   return (
     <section className="flex flex-col lg:flex-row justify-between mt-6 md:mt-11">
       <div className="flex flex-col-reverse lg:flex-row gap-2 lg:gap-4 w-full lg:w-1/2">
@@ -83,7 +89,14 @@ function ProductDetails({ productData }) {
         </div>
 
         <div className="flex flex-col md:flex-row gap-4 pb-8 mt-10 border-b border-light-gray-1">
-          <ProductCTA label="Add to cart" type="dark" />
+          <ProductCTA
+            label="Add to cart"
+            type="dark"
+            onClick={(e) => {
+              e.stopPropagation();
+              handleAddToCart(productData);
+            }}
+          />
           <ProductCTA label="Checkout now" type="light" />
         </div>
 
