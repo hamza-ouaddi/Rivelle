@@ -1,8 +1,15 @@
 import React from "react";
-
 import { IoIosArrowBack, IoIosArrowForward, IoIosClose } from "react-icons/io";
+import { useDispatch } from "react-redux";
+import { updateQuantity } from "../../../redux/features/cart/cartSlice";
 
 function OrderItem({ products }) {
+  const dispatch = useDispatch();
+
+  const handleQuantityUpdate = (id, type) => {
+    dispatch(updateQuantity({ id, type }));
+  };
+
   return (
     <table className="w-full text-left rtl:text-right lg:col-span-2 h-fit">
       <thead className="text-sm md:text-xl text-medium-gray-1 border-b border-medium-gray-1 uppercase">
@@ -38,12 +45,25 @@ function OrderItem({ products }) {
             </td>
 
             <td className="py-6">
-              <div className="flex items-center gap-2">
-                <button className="w-8 h-8 flex items-center justify-center rounded-full border border-light-gray-2">
+              <div className="flex items-center gap-1">
+                <button
+                  disabled={item.quantity === 1}
+                  onClick={() => handleQuantityUpdate(item.id, "decrease")}
+                  className={`w-8 h-8 flex items-center justify-center transition-all duration-300 ease-in-out border border-light-gray-2 rounded-full ${
+                    item.quantity === 1
+                      ? "bg-light-gray-1 hover:bg-light-gray-1 opacity-50"
+                      : "hover:bg-light-gray-2 hover:border-light-gray-3"
+                  }`}
+                >
                   <IoIosArrowBack />
                 </button>
-                <span className="font-medium text-base">{item.quantity}</span>
-                <button className="w-8 h-8 flex items-center justify-center rounded-full border border-light-gray-2">
+                <span className="font-medium text-base min-w-5 text-center">
+                  {item.quantity}
+                </span>
+                <button
+                  onClick={() => handleQuantityUpdate(item.id, "increase")}
+                  className="w-8 h-8 flex items-center justify-center hover:bg-light-gray-2 border border-light-gray-2 hover:border-light-gray-3 transition-all duration-300 ease-in-out rounded-full"
+                >
                   <IoIosArrowForward />
                 </button>
               </div>
