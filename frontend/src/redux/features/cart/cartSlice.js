@@ -27,6 +27,21 @@ export const cartSlice = createSlice({
       }
       updateCartSummary(state);
     },
+    updateQuantity: (state, action) => {
+      const product = state.products.find(
+        (product) => product.id === action.payload.id
+      );
+
+      if (product) {
+        if (action.payload.type === "increase") {
+          product.quantity += 1;
+        } else if (action.payload.type === "decrease" && product.quantity > 1) {
+          product.quantity -= 1;
+        }
+      }
+
+      updateCartSummary(state);
+    },
   },
 });
 
@@ -44,6 +59,6 @@ const updateCartSummary = (state) => {
   state.totalPrice = state.subtotal + state.tax + state.shipping;
 };
 
-export const { addToCart } = cartSlice.actions;
+export const { addToCart, updateQuantity } = cartSlice.actions;
 
 export default cartSlice.reducer;
