@@ -1,13 +1,20 @@
 import React from "react";
 import { IoIosArrowBack, IoIosArrowForward, IoIosClose } from "react-icons/io";
 import { useDispatch } from "react-redux";
-import { updateQuantity } from "../../../redux/features/cart/cartSlice";
+import {
+  removeFromCart,
+  updateQuantity,
+} from "../../../redux/features/cart/cartSlice";
 
 function OrderItem({ products }) {
   const dispatch = useDispatch();
 
   const handleQuantityUpdate = (id, type) => {
     dispatch(updateQuantity({ id, type }));
+  };
+
+  const handleRemoveFromCart = (id) => {
+    dispatch(removeFromCart(id));
   };
 
   return (
@@ -24,7 +31,7 @@ function OrderItem({ products }) {
         {products.map((item) => (
           <tr key={item.id} className="border-b border-light-gray-2">
             <td className="flex flex-col md:flex-row items-start md:items-center gap-4 w-max py-6 pl-5">
-              <button>
+              <button onClick={() => handleRemoveFromCart(item.id)}>
                 <IoIosClose size={24} className="text-medium-gray-1" />
               </button>
 

@@ -15,6 +15,7 @@ function FeaturedProducts() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {productsData.slice(0, 8).map((product) => (
           <ProductCard
+            key={product.id}
             img={product.image}
             title={product.title}
             price={product.price}

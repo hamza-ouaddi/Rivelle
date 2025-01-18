@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link, useLocation } from "react-router";
 
 function Breadcrumb() {
@@ -10,18 +10,17 @@ function Breadcrumb() {
     const url = `/${segment}`;
 
     return (
-      <>
-        <span key={index} className="text-gray-400 mx-2 first:hidden">
-          ›
-        </span>
+      <Fragment key={index}>
+        {index > 0 && (
+          <span className="text-medium-gray-1 text-xl mx-2">›</span>
+        )}
         <Link
-          key={segment}
           to={`${url}`}
-          className="capitalize font-clashDisplay text-xl last:font-medium "
+          className="capitalize font-clashDisplay text-xl text-medium-gray-1 last:text-dark-gray-2 last:font-medium "
         >
           {segment === "" ? "Home" : segment}
         </Link>
-      </>
+      </Fragment>
     );
   });
   return <div className="mb-4 z-10">{breadcrumbLinks}</div>;
