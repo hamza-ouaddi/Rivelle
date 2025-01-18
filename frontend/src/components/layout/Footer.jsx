@@ -47,10 +47,8 @@ function Footer() {
             Categories
           </li>
           {categoriesRoutes.map((category) => (
-            <li className="mb-3">
-              <Link key={category.label} to={category.url}>
-                {category.label}
-              </Link>
+            <li key={category.label} className="mb-3">
+              <Link to={category.url}>{category.label}</Link>
             </li>
           ))}
         </ul>
@@ -60,10 +58,8 @@ function Footer() {
             Products
           </li>
           {productsRoutes.map((product) => (
-            <li className="mb-3">
-              <Link key={product.label} to={product.url}>
-                {product.label}
-              </Link>
+            <li key={product.label} className="mb-3">
+              <Link to={product.url}>{product.label}</Link>
             </li>
           ))}
         </ul>
@@ -73,10 +69,8 @@ function Footer() {
             Customer Services
           </li>
           {customerServices.map((service) => (
-            <li className="mb-3">
-              <Link key={service.label} to={service.url}>
-                {service.label}
-              </Link>
+            <li key={service.label} className="mb-3">
+              <Link to={service.url}>{service.label}</Link>
             </li>
           ))}
         </ul>
@@ -86,10 +80,8 @@ function Footer() {
             Follow Us
           </li>
           {socialMediaLinks.map((socialMedia) => (
-            <li className="mb-3">
-              <Link key={socialMedia.label} to={socialMedia.url}>
-                {socialMedia.label}
-              </Link>
+            <li key={socialMedia.label} className="mb-3">
+              <Link to={socialMedia.url}>{socialMedia.label}</Link>
             </li>
           ))}
         </ul>
