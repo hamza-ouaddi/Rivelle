@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import Category from "./pages/Category";
 import SingleProduct from "./pages/SingleProduct";
 import Cart from "./pages/Cart";
+import SignIn from "./pages/SignIn";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
+        <Route path="/signin" element={<SignIn />} />
       </Routes>
     </>
   );
