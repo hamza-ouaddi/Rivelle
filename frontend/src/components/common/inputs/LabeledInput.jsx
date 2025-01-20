@@ -1,9 +1,9 @@
 import React from "react";
 
-function FormInput({ label, ...props }) {
+function LabeledInput({ label, ...props }) {
   return (
     <div className="font-clashGrotesk">
-      <label className="block text-base">{label}</label>
+      <label className="block text-base tracking-wide">{label}</label>
       <input
         {...props}
         className="w-full bg-white-2 h-12 px-4 border border-light-gray-3 focus:outline-gray rounded-xl"
@@ -12,4 +12,4 @@ function FormInput({ label, ...props }) {
   );
 }
 
-export default FormInput;
+export default LabeledInput;

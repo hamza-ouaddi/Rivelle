@@ -1,10 +1,18 @@
 import React from "react";
-import FormInput from "../../../components/common/inputs/FormInput";
+import LabeledInput from "../inputs/LabeledInput";
 
-function SignInForm() {
+function SignUpForm() {
   return (
     <form className="space-y-6">
-      <FormInput
+      <LabeledInput
+        label="Username"
+        type="text"
+        name="username"
+        placeholder="e.g. john_doe"
+        required
+      />
+
+      <LabeledInput
         label="Email"
         type="email"
         name="email"
@@ -12,7 +20,7 @@ function SignInForm() {
         required
       />
 
-      <FormInput
+      <LabeledInput
         label="Password"
         type="password"
         name="password"
@@ -20,14 +28,22 @@ function SignInForm() {
         required
       />
 
+      <LabeledInput
+        label="Confirm Password"
+        type="password"
+        name="confirmPassword"
+        placeholder="Re-enter your password"
+        required
+      />
+
       <button
         type="submit"
         className="font-clashGrotesk font-medium text-xl text-white bg-dark-gray-2 w-full py-[10px] rounded-full"
       >
-        Sign in
+        Sign up
       </button>
     </form>
   );
 }
 
-export default SignInForm;
+export default SignUpForm;
