@@ -42,7 +42,7 @@ function Navbar() {
             </span>
           </Link>
           <LinkCTA
-            url="/sign-in"
+            url="/signin"
             label="Sign in"
             type="dark"
             additionalStyle="hidden md:block"
