@@ -1,8 +1,8 @@
 import React from "react";
-import SignInForm from "./components/SignInForm";
 import { Link } from "react-router";
 import signInBackground from "../../assets/images/signin-background.jpg";
 import RivelleLogo from "../../assets/images/rivelle-logo-white.svg";
+import SignInForm from "../../components/common/forms/SignInForm";
 
 function SignIn() {
   return (
