@@ -1,14 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import LabeledInput from "../inputs/LabeledInput";
+import { useRegisterMutation } from "../../../redux/features/auth/authApi";
+import { useNavigate } from "react-router";
 
 function SignUpForm() {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [registerUser, { isLoading }] = useRegisterMutation();
+  const navigate = useNavigate();
+
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+    const data = {
+      username,
+      email,
+      password,
+      confirmPassword,
+    };
+
+    try {
+      const response = await registerUser(data).unwrap();
+      navigate("/signin");
+      console.log("Signup Response: ", response);
+    } catch (error) {
+      console.log("Registration failed");
+    }
+  };
   return (
-    <form className="space-y-6">
+    <form className="space-y-6" onSubmit={handleSignUp}>
       <LabeledInput
         label="Username"
         type="text"
         name="username"
         placeholder="e.g. john_doe"
+        onChange={(e) => setUsername(e.target.value)}
         required
       />
 
@@ -17,6 +44,7 @@ function SignUpForm() {
         type="email"
         name="email"
         placeholder="e.g. johndoe@email.com"
+        onChange={(e) => setEmail(e.target.value)}
         required
       />
 
@@ -25,6 +53,7 @@ function SignUpForm() {
         type="password"
         name="password"
         placeholder="Enter your password"
+        onChange={(e) => setPassword(e.target.value)}
         required
       />
 
@@ -33,6 +62,7 @@ function SignUpForm() {
         type="password"
         name="confirmPassword"
         placeholder="Re-enter your password"
+        onChange={(e) => setConfirmPassword(e.target.value)}
         required
       />
 
