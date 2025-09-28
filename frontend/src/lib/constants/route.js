@@ -21,6 +21,44 @@ export const navbarRoutes = [
   },
 ];
 
+export const userDropdownMenu = [
+  {
+    label: "Dashboard",
+    url: "/dashboard",
+  },
+  {
+    label: "Profile",
+    url: "/dashboard/profile",
+  },
+  {
+    label: "Orders",
+    url: "/dashboard/orders",
+  },
+  {
+    label: "Payments",
+    url: "/dashboard/payments",
+  },
+];
+
+export const adminDropdownMenu = [
+  {
+    label: "Dashboard",
+    url: "/dashboard",
+  },
+  {
+    label: "Manage Items",
+    url: "/dashboard/manage-items",
+  },
+  {
+    label: "All orders",
+    url: "/dashboard/manage-orders",
+  },
+  {
+    label: "Add new post",
+    url: "/dashboard/add-post",
+  },
+];
+
 export const mainCategoriesWithImages = [
   {
     label: "Women",
