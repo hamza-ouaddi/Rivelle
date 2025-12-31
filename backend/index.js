@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import { connectToDB } from "./config/db.js";
 import userRoutes from "./routes/user.routes.js";
+import productRoutes from "./routes/product.routes.js";
 
 dotenv.config();
 const app = express();
@@ -20,6 +21,7 @@ app.use(
 );
 
 app.use("/api/auth", userRoutes);
+app.use("/api/products", productRoutes);
 
 app.get("/", (req, res) => {
   res.send("Rivelle");
