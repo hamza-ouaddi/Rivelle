@@ -6,6 +6,7 @@ const authApi = createApi({
     baseUrl: "http://localhost:3000/api/auth/",
     credentials: "include",
   }),
+  tagTypes: ["User"],
   endpoints: (builder) => ({
     register: builder.mutation({
       query: (newUser) => ({
@@ -41,6 +42,7 @@ const authApi = createApi({
         method: "PATCH",
         body: { role },
       }),
+      invalidatesTags: ["User"],
     }),
     updateProfile: builder.mutation({
       query: (userData) => ({
@@ -48,6 +50,7 @@ const authApi = createApi({
         method: "PATCH",
         body: userData,
       }),
+      invalidatesTags: ["User"],
     }),
     deleteUser: builder.mutation({
       query: (userId) => ({

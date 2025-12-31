@@ -9,12 +9,12 @@ function HeroSection() {
       style={{ backgroundImage: `url(${heroBackground})` }}
     >
       <div className="absolute inset-0 bg-gradient-to-t to-40% from-black/60 to-transparent z-0" />
-      <h1 className="font-semibold text-[54px] md:text-8xl z-10 leading-none">
+      <h1 className="font-semibold text-[clamp(1.5rem,5vw,6rem)] z-10 leading-none">
         OUR SPRING COLLECTION
       </h1>
 
       <div className="flex justify-between flex-col lg:flex-row gap-4 items-start z-10">
-        <p className="font-normal text-2xl md:text-[32px] lg:w-[60%] xl:w-[45%] leading-tight">
+        <p className="font-normal text-[clamp(1rem,2vw,2rem)] lg:w-[60%] xl:w-[45%] leading-tight">
           Find out our best spring collection offering our best quality product
           in Rivelle shop.
         </p>
