@@ -162,3 +162,82 @@ export const getProductById = async (req, res) => {
     });
   }
 };
+
+export const updateProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const {
+      name,
+      description,
+      price,
+      discountPrice,
+      category,
+      type,
+      images,
+      sizes,
+      isFeatured,
+    } = req.body;
+
+    const updateData = {
+      name,
+      description,
+      price,
+      discountPrice,
+      category,
+      type,
+      images,
+      sizes,
+      isFeatured,
+    };
+
+    const updatedProduct = await Product.findByIdAndUpdate(id, updateData, {
+      new: true,
+      runValidators: true,
+    }).populate("author", "name email");
+
+    if (!updatedProduct) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Product not found" });
+    }
+
+    res.status(200).json({
+      success: true,
+      message: "Product updated successfully",
+      product: updatedProduct,
+    });
+  } catch (error) {
+    console.error("Error updating the product", error);
+    res
+      .status(500)
+      .json({ success: false, message: "Failed to update product" });
+  }
+};
+
+export const deleteProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const deletedProduct = await Product.findByIdAndDelete(id);
+
+    if (!deletedProduct) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Failed to delete product" });
+    }
+
+    await Review.deleteMany({ id });
+
+    res.status(200).json({
+      success: true,
+      message: "Product deleted successfully",
+      product: deletedProduct,
+    });
+  } catch (error) {
+    console.error("Error deleting the product", error);
+    res
+      .status(500)
+      .json({ success: false, message: "Failed to delete product" });
+  }
+};
