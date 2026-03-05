@@ -241,3 +241,43 @@ export const deleteProduct = async (req, res) => {
       .json({ success: false, message: "Failed to delete product" });
   }
 };
+
+export const getRelatedProducts = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const product = await Product.findById(id);
+
+    if (!product) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Product not found" });
+    }
+
+    const titleRegex = new RegExp(
+      product.name
+        .split(" ")
+        .filter((word) => word.length > 1)
+        .join("|"),
+      "i"
+    );
+
+    const relatedProducts = await Product.find({
+      _id: { $ne: id },
+      $or: [{ name: { $regex: titleRegex } }, { category: product.category }],
+    })
+      .limit(4)
+      .populate("author", "name email");
+
+    res.status(200).json({
+      success: true,
+      count: relatedProducts.length,
+      product: relatedProducts,
+    });
+  } catch (error) {
+    console.error("Error fetching related products", error);
+    res
+      .status(500)
+      .json({ success: false, message: "Failed to fetch related products" });
+  }
+};
