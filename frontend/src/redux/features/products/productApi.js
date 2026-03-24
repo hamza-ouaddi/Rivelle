@@ -27,9 +27,9 @@ const productApi = createApi({
           isFeatured: isFeatured || "",
           search: search || "",
           page: page.toString(),
-          limit: limit.toString,
+          limit: limit.toString(),
         }).toString();
-        return { url: `/${queryParams}`, method: "GET" };
+        return { url: `?${queryParams}`, method: "GET" };
       },
       providesTags: ["Product"],
     }),

@@ -6,7 +6,7 @@ function ProductCard({ productId, img, title, price, category }) {
     <Link to={`/shop/${category}/${productId}`}>
       <div>
         <img
-          src={img[0]}
+          src={img}
           alt={title}
           loading="lazy"
           className="rounded-2xl aspect-[4/5] object-cover object-center"
