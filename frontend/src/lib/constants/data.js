@@ -31,6 +31,11 @@ import womenImage from "../../assets/images/woman-image.jpg";
 import menImage from "../../assets/images/man-image.jpg";
 import kidsImage from "../../assets/images/kids-image.jpg";
 
+import emilyParker from "../../assets/images/emily-parker.jpg";
+import michaelChen from "../../assets/images/michael-chen.jpg";
+import oliviaThompson from "../../assets/images/olivia-thompson.jpg";
+import miaAnderson from "../../assets/images/mia-anderson.jpg";
+
 export const productsData = [
   {
     id: 1,
@@ -201,3 +206,72 @@ export const shopBannerContent = {
       "Browse our playful and practical children's collection, designed for comfort and adventure.",
   },
 };
+
+export const reviewsData = [
+  {
+    id: 1,
+    user: {
+      name: "Emily Parker",
+      profilePicture: "https://randomuser.me/api/portraits/women/32.jpg",
+    },
+    rating: 5,
+    comment:
+      "I ordered a set of summer clothes last week and I'm genuinely impressed with the quality! The cotton dress and linen shirt I got are exactly as pictured on the website. The fabric feels premium and breathable, perfect for hot days. What really surprised me was the attention to detail in packaging and the sweet thank-you note included. The sizing guide was spot-on too. Already planning my next purchase!",
+    createdAt: "2024-12-12",
+  },
+  {
+    id: 2,
+    user: {
+      name: "Michael Chen",
+      profilePicture: "https://randomuser.me/api/portraits/women/44.jpg",
+    },
+    rating: 3,
+    comment:
+      "The jacket I ordered looks good and feels comfortable. However, the size runs a bit larger than expected. Consider ordering one size down. Good value for money though!",
+    createdAt: "2024-11-24",
+  },
+  {
+    id: 3,
+    user: {
+      name: "Olivia Thompson",
+      profilePicture: "https://randomuser.me/api/portraits/women/89.jpg",
+    },
+    rating: 4,
+    comment:
+      "Found my new favorite online store! The dress I bought fits perfectly and the material is high quality. Love how they have detailed size guides. Plus, their return policy is super convenient. Can't wait to order more!",
+    createdAt: "2024-11-02",
+  },
+  {
+    id: 4,
+    user: {
+      name: "Mia Anderson",
+      profilePicture: "https://randomuser.me/api/portraits/women/12.jpg",
+    },
+    rating: 5,
+    comment:
+      "Absolutely love the dress I ordered! The fabric is so soft and the fit is perfect. The colors are exactly as shown in the photos. Will definitely be ordering more pieces soon!",
+    createdAt: "2024-10-17",
+  },
+  {
+    id: 5,
+    user: {
+      name: "Sophie Williams",
+      profilePicture: "https://randomuser.me/api/portraits/women/55.jpg",
+    },
+    rating: 4,
+    comment:
+      "The coat I ordered is absolutely stunning! The material feels premium and the stitching is very well done. It fits true to size and keeps me warm without being too bulky. Perfect for the winter season!",
+    createdAt: "2024-09-05",
+  },
+  {
+    id: 6,
+    user: {
+      name: "Isabella Moore",
+      profilePicture: "https://randomuser.me/api/portraits/women/94.jpg",
+    },
+    rating: 5,
+    comment:
+      "Ordered a suit for a wedding and I couldn't be happier! The tailoring is excellent, the fabric feels luxurious, and the color is exactly as pictured. Got so many compliments on the day. This is my go-to store for formal wear from now on!",
+    createdAt: "2024-08-21",
+  },
+];
