@@ -31,11 +31,6 @@ import womenImage from "../../assets/images/woman-image.jpg";
 import menImage from "../../assets/images/man-image.jpg";
 import kidsImage from "../../assets/images/kids-image.jpg";
 
-import emilyParker from "../../assets/images/emily-parker.jpg";
-import michaelChen from "../../assets/images/michael-chen.jpg";
-import oliviaThompson from "../../assets/images/olivia-thompson.jpg";
-import miaAnderson from "../../assets/images/mia-anderson.jpg";
-
 export const productsData = [
   {
     id: 1,
