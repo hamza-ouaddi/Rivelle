@@ -1,6 +1,4 @@
 import React from "react";
-
-import emilyParker from "../../../assets/images/emily-parker.jpg";
 import { IoStar } from "react-icons/io5";
 
 function ReviewCard({ review }) {
